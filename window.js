@@ -99,3 +99,20 @@ document.getElementById("transfer-money").addEventListener("click",function(){
     document.getElementById("transfer-parent").style.display = "block"
 
 })
+// get bonus clicked
+
+document.getElementById("bonus-btn").addEventListener("click",function(e){
+    e.preventDefault()
+    console.log("click hoise")
+    document.getElementById("cash-out-parent").style.display = "none"
+    document.getElementById("add-money-parent").style.display = "none"
+    document.getElementById("transfer-parent").style.display = "none"
+    document.getElementById("bonus-parent").style.display = "block"
+})
+
+// logout button
+document.getElementById("logout-btn").addEventListener("click", function(e){
+    e.preventDefault()
+    console.log("logout click")
+    window.location.href = "./index.html"
+});
