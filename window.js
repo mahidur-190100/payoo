@@ -65,9 +65,32 @@ document.getElementById("transfer-btn").addEventListener("click",function(e){
         alert("wrong pin")
     }
     const totalSendMoney = availabaleSendMoney - transferAmount
-     document.getElementById("available-balance").innerText =totalSendMoney
+    document.getElementById("available-balance").innerText =totalSendMoney
 
 })
+
+// pay bill work  
+document.getElementById("pay-btn").addEventListener("click",function(e){
+    e.preventDefault()
+    console.log("click done")
+    const payBillAccountNumber = document.getElementById("pay-bil-account-number").value
+    const payBillAmount = parseInt(document.getElementById("pay-bill-ammount").value)
+    const payBillPin = parseInt(document.getElementById("pay-bill-pin").value)
+    const availabalpayBill = parseInt(document.getElementById("available-balance").innerText)
+    if(payBillAccountNumber.length < 11){
+        alert("please provide valid account number")
+        return
+    }
+    if (payBillPin != pinNumber){
+        alert("wrong pin")
+    }
+    const totalpayBillMoney = availabalpayBill - payBillAmount
+    document.getElementById("available-balance").innerText =totalpayBillMoney
+
+
+})
+
+
 
 
 
@@ -109,6 +132,24 @@ document.getElementById("bonus-btn").addEventListener("click",function(e){
     document.getElementById("transfer-parent").style.display = "none"
     document.getElementById("bonus-parent").style.display = "block"
 })
+
+// pay bill clicked 
+
+document.getElementById("pay-bill-btn").addEventListener("click",function(e){
+    e.preventDefault()
+    console.log("click hoise")
+    document.getElementById("cash-out-parent").style.display = "none"
+    document.getElementById("add-money-parent").style.display = "none"
+    document.getElementById("transfer-parent").style.display = "none"
+    document.getElementById("bonus-parent").style.display = "none"
+    document.getElementById("pay-bill-parent").style.display = "block"
+})
+
+
+
+
+
+
 
 // logout button
 document.getElementById("logout-btn").addEventListener("click", function(e){
