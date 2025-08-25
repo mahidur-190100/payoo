@@ -49,7 +49,25 @@ document.getElementById("withdraw-btn").addEventListener("click",function(e){
     document.getElementById("available-balance").innerText = totalBalanceWithdraw
 
 })
+// tansfer er work
+document.getElementById("transfer-btn").addEventListener("click",function(e){
+    e.preventDefault()
+    console.log("click done")
+    const transferAccountNumber = document.getElementById("trasnfer-account-number").value
+    const transferAmount = parseInt(document.getElementById("transfer-ammount").value)
+    const transferPin = parseInt(document.getElementById("transfer-pin").value)
+    const availabaleSendMoney = parseInt(document.getElementById("available-balance").innerText)
+    if(transferAccountNumber.length < 11){
+        alert("please provide valid account number")
+        return
+    }
+    if (transferPin != pinNumber){
+        alert("wrong pin")
+    }
+    const totalSendMoney = availabaleSendMoney - transferAmount
+     document.getElementById("available-balance").innerText =totalSendMoney
 
+})
 
 
 
@@ -72,4 +90,12 @@ document.getElementById("add-money-1").addEventListener("click", function() {
 document.getElementById("cash-out").addEventListener("click", function() {
     document.getElementById("cash-out-parent").style.display = "block"
     document.getElementById("add-money-parent").style.display = "none"
+})
+
+// when Transfer clicked
+document.getElementById("transfer-money").addEventListener("click",function(){
+    document.getElementById("cash-out-parent").style.display = "none"
+    document.getElementById("add-money-parent").style.display = "none"
+    document.getElementById("transfer-parent").style.display = "block"
+
 })
