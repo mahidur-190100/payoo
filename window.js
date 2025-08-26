@@ -107,12 +107,32 @@ document.getElementById("pay-btn").addEventListener("click",function(e){
 document.getElementById("add-money-1").addEventListener("click", function() {
     document.getElementById("cash-out-parent").style.display = "none"
     document.getElementById("add-money-parent").style.display = "block"
+    
+    
+    const btns = document.getElementsByClassName("button-1")
+    // console.log (btns)
+    for (const btn of btns){
+        btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]")
+        btn.classList.add("border-gray-500")
+        
+     }
+     document.getElementById("add-money-1").classList.remove("border-gray-500")
+     document.getElementById("add-money-1").classList.add("border-[#0874f2]", "bg-[#0874f20d]")
 })
 
 // when Cash Out clicked
 document.getElementById("cash-out").addEventListener("click", function() {
     document.getElementById("cash-out-parent").style.display = "block"
     document.getElementById("add-money-parent").style.display = "none"
+    const btns = document.getElementsByClassName("button-1")
+    // console.log (btns)
+    for (const btn of btns){
+        btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]")
+        btn.classList.add("border-gray-500")
+        
+     }
+     document.getElementById("cash-out").classList.remove("border-gray-500")
+     document.getElementById("cash-out").classList.add("border-[#0874f2]", "bg-[#0874f20d]")
 })
 
 // when Transfer clicked
@@ -120,6 +140,15 @@ document.getElementById("transfer-money").addEventListener("click",function(){
     document.getElementById("cash-out-parent").style.display = "none"
     document.getElementById("add-money-parent").style.display = "none"
     document.getElementById("transfer-parent").style.display = "block"
+    const btns = document.getElementsByClassName("button-1")
+    // console.log (btns)
+    for (const btn of btns){
+        btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]")
+        btn.classList.add("border-gray-500")
+        
+     }
+     document.getElementById("transfer-money").classList.remove("border-gray-500")
+     document.getElementById("transfer-money").classList.add("border-[#0874f2]", "bg-[#0874f20d]")
 
 })
 // get bonus clicked
@@ -131,6 +160,15 @@ document.getElementById("bonus-btn").addEventListener("click",function(e){
     document.getElementById("add-money-parent").style.display = "none"
     document.getElementById("transfer-parent").style.display = "none"
     document.getElementById("bonus-parent").style.display = "block"
+    const btns = document.getElementsByClassName("button-1")
+    // console.log (btns)
+    for (const btn of btns){
+        btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]")
+        btn.classList.add("border-gray-500")
+        
+     }
+     document.getElementById("bonus-btn").classList.remove("border-gray-500")
+     document.getElementById("bonus-btn").classList.add("border-[#0874f2]", "bg-[#0874f20d]")
 })
 
 // pay bill clicked 
@@ -143,6 +181,15 @@ document.getElementById("pay-bill-btn").addEventListener("click",function(e){
     document.getElementById("transfer-parent").style.display = "none"
     document.getElementById("bonus-parent").style.display = "none"
     document.getElementById("pay-bill-parent").style.display = "block"
+    const btns = document.getElementsByClassName("button-1")
+    // console.log (btns)
+    for (const btn of btns){
+        btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]")
+        btn.classList.add("border-gray-500")
+        
+     }
+     document.getElementById("pay-bill-btn").classList.remove("border-gray-500")
+     document.getElementById("pay-bill-btn").classList.add("border-[#0874f2]", "bg-[#0874f20d]")
 })
 
 
@@ -157,3 +204,8 @@ document.getElementById("logout-btn").addEventListener("click", function(e){
     console.log("logout click")
     window.location.href = "./index.html"
 });
+
+
+
+
+
